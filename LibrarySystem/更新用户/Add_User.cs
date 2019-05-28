@@ -60,9 +60,16 @@ namespace LibrarySystem
         {//防错
             q = textBox_Password.Text.Length;//q和p在上面定义
             p = textBox_phonenum.Text.Length;
-            if(q<9|q>11)
+            if(q==0)
             {
-                MessageBox.Show("请输入9-11位的密码！");
+                MessageBox.Show("请输入密码！");
+            }
+            if (q > 0)
+            {
+                if (q < 9 | q > 11)
+                {
+                    MessageBox.Show("请输入9-11位的密码！");
+                }
             }
             if (p != 11)
             {
@@ -92,6 +99,7 @@ namespace LibrarySystem
                     MessageBox.Show(textBox_email.Text, "请您确认邮箱地址：");
                
             }
+            
             //防错
             if (type == "1")
             {

@@ -59,8 +59,8 @@ namespace LibrarySystem
             if (level1=="用户")
             {
                 Add_User.Visible = false;
-                新用户注册ToolStripMenuItem.Enabled = false;
-                Add_Books.Enabled = false;
+                新用户注册ToolStripMenuItem.Visible = false;
+                Add_Books.Visible = false;
             }
         }
 

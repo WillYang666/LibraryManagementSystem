@@ -31,6 +31,8 @@ namespace LibrarySystem
             if(PublicPassBy.level!="管理员")
             {
                 send_email.Visible = false;
+                btn_all.Visible = false;
+              
             }
             //时间显示
             timer1.Interval = 1000;

@@ -173,6 +173,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "登陆界面";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.LoginForm_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

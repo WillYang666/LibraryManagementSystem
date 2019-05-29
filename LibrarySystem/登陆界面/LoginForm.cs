@@ -13,6 +13,7 @@ namespace LibrarySystem
     public partial class LoginForm : Form
     {
         public string level;
+        
         public LoginForm()
         {
             InitializeComponent();
@@ -34,7 +35,8 @@ namespace LibrarySystem
             DataBaseApplication.DataBaseName = "Practice";
             DataBaseApplication.UserID = "sa";
             DataBaseApplication.PassWord = "sa";
-        }
+        
+    }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -125,5 +127,14 @@ namespace LibrarySystem
             sign.type = "1";
             sign.ShowDialog();
         }
+       
+       
+
+        private void LoginForm_Resize(object sender, EventArgs e)
+        {
+           
+        }
     }
+   
+
 }

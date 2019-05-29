@@ -13,6 +13,7 @@ namespace LibrarySystem
     public partial class FindBookForm : Form
     {
         public string level1;
+        public string Select_ID;
         public FindBookForm()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace LibrarySystem
             }
             if (toolStripComboBox1.Text == "书名")
             {
-                string sql = "select *  from Books_Info where  书名 like '%" + toolStripTextBox1.Text.ToString() + "%' ";
+                string sql = "select distinct 书名,作者,出版社 from Books_Info where  书名 like '%" + toolStripTextBox1.Text.ToString() + "%' ";
                 
                 DataTable dt = new DataTable();
                 dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
@@ -77,8 +78,9 @@ namespace LibrarySystem
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            BorrowBook borrow = new BorrowBook();
-            borrow.select_ID= (string)dataGridView1.CurrentCell.Value;
+            
+            BorrowBook1 borrow = new BorrowBook1();
+            borrow.Select_ID = (string)dataGridView1.CurrentCell.Value;
             borrow.ShowDialog();
         }
 

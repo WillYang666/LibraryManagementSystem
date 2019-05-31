@@ -30,6 +30,13 @@ namespace LibrarySystem
             DataTable dt = new DataTable();
             dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
             dataGridView1.DataSource = dt;
+            //书评展示
+            string sql1 = "select 书评 from IMDB where 书名='" + Select_ID + "'";
+            DataBaseApplication.ExecuteNonQuery(sql1);
+            DataTable dt1 = new DataTable();
+            dt1 = DataBaseApplication.GetDataTableValue(sql1);
+            dataGridView2.DataSource = dt1;
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)

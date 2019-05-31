@@ -33,8 +33,11 @@
             this.textBox_BookName = new System.Windows.Forms.TextBox();
             this.label_BookName = new System.Windows.Forms.Label();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.submit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,8 +50,13 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.submit);
             this.splitContainer1.Panel1.Controls.Add(this.textBox_BookName);
             this.splitContainer1.Panel1.Controls.Add(this.label_BookName);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.richTextBox1);
             this.splitContainer1.Size = new System.Drawing.Size(533, 331);
             this.splitContainer1.SplitterDistance = 47;
             this.splitContainer1.TabIndex = 0;
@@ -80,6 +88,25 @@
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(533, 280);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // submit
+            // 
+            this.submit.Location = new System.Drawing.Point(209, 7);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(75, 23);
+            this.submit.TabIndex = 2;
+            this.submit.Text = "提交";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
+            // 
             // WriteComment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -92,6 +119,7 @@
             this.Load += new System.EventHandler(this.WriteComment_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -104,5 +132,7 @@
         private System.Windows.Forms.TextBox textBox_BookName;
         private System.Windows.Forms.Label label_BookName;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

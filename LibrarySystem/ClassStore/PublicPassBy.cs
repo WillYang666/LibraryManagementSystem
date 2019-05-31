@@ -12,5 +12,7 @@ namespace LibrarySystem
         public static string _name;
         public static string id;
         public static string email;
+        public static string IMDB_Bookname;
+        public static string IMDB_Bookid;
     }
 }

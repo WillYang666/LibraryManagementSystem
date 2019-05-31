@@ -73,8 +73,18 @@ namespace LibrarySystem
 
         private void Edit_Info_Click(object sender, EventArgs e)
         {
-            Edit_User edit = new Edit_User();
-            edit.ShowDialog();
+            if (level1 == "管理员")
+            {
+                Edit_User edit = new Edit_User();
+                edit.ShowDialog();
+            }
+            if (level1 == "用户")
+            {
+                Add_User edit = new Add_User();
+                edit.type = "3";
+                edit.ShowDialog();
+            }
+
         }
 
         private void 新用户注册ToolStripMenuItem_Click(object sender, EventArgs e)

@@ -28,7 +28,7 @@ namespace LibrarySystem
         private void WriteComment_Load(object sender, EventArgs e)
         {
             ReturnBook ab = new ReturnBook();
-            textBox_BookName.Text = "'"+ ab.bookname + "'";
+            textBox_BookName.Text = PublicPassBy.IMDB_Bookname;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace LibrarySystem
     public partial class Add_User : Form
     {
         public string select_ID;
-        public string type;//1添加，2修改
+        public string type;//1添加，2管理员修改,3用户修改
         public long p,q;
         public Add_User()
         {

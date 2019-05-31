@@ -25,7 +25,7 @@ namespace LibrarySystem
 
         private void BorrowBook1_Load(object sender, EventArgs e)
         {
-            string sql = "select * from Books_Info where 书名='"+Select_ID+"'";
+            string sql = "select * from Books_Info where 书名='"+Select_ID+"'and 库存数!=0";
             DataBaseApplication.ExecuteNonQuery(sql);
             DataTable dt = new DataTable();
             dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句

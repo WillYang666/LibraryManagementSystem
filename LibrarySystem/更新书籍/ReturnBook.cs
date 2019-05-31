@@ -81,9 +81,12 @@ namespace LibrarySystem
             DataBaseApplication.ExecuteNonQuery(sql);
             //获取书名
             bookname = (string)dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            PublicPassBy.IMDB_Bookname = bookname;
+            PublicPassBy.IMDB_Bookid = select_ID;
             //添加进还书单
             string sql1 = "insert into Return_List values('"+select_ID+"','"+dataGridView1.CurrentRow.Cells[1].Value.ToString()+"','"+ DateTime.Now.ToLongDateString().ToString() + "','"+ dataGridView1.CurrentRow.Cells[3].Value.ToString()+"','"+PublicPassBy._name+"','"+PublicPassBy.email+"')";
             DataBaseApplication.ExecuteNonQuery(sql1);
+            //加库存
             string sql2 = "update Books_Info set 库存数=库存数+1 where 书籍序列号='"+select_ID+"'";
             DataBaseApplication.ExecuteNonQuery(sql2);
             

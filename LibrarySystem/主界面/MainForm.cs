@@ -62,6 +62,14 @@ namespace LibrarySystem
                 新用户注册ToolStripMenuItem.Visible = false;
                 Add_Books.Visible = false;
             }
+            //热门推荐
+           /* string sql = "select 书名,排行 from Book_Recommend";         
+            DataTable dt = new DataTable();
+            DataBaseApplication.ExecuteNonQuery(sql);
+            dt = DataBaseApplication.GetDataTableValue(sql);
+            label1_1.Text = dt.Rows[0][1].ToString();
+            */
+
         }
 
         private void Add_User_Click(object sender, EventArgs e)
@@ -161,6 +169,18 @@ namespace LibrarySystem
 
         private void Help_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label1_1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 热门推荐ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookRecommend show = new BookRecommend();
+            show.ShowDialog();
 
         }
     }

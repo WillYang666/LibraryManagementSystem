@@ -34,6 +34,7 @@
             this.书籍ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新用户注册ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户信息修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.热门推荐ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.书籍管理BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新书入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.借书办理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,9 +65,18 @@
             this.xxx = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.label1_1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -86,7 +96,8 @@
             // 
             this.书籍ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新用户注册ToolStripMenuItem,
-            this.用户信息修改ToolStripMenuItem});
+            this.用户信息修改ToolStripMenuItem,
+            this.热门推荐ToolStripMenuItem});
             this.书籍ToolStripMenuItem.Name = "书籍ToolStripMenuItem";
             this.书籍ToolStripMenuItem.Size = new System.Drawing.Size(83, 21);
             this.书籍ToolStripMenuItem.Text = "系统管理(S)";
@@ -94,16 +105,23 @@
             // 新用户注册ToolStripMenuItem
             // 
             this.新用户注册ToolStripMenuItem.Name = "新用户注册ToolStripMenuItem";
-            this.新用户注册ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.新用户注册ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新用户注册ToolStripMenuItem.Text = "新用户注册";
             this.新用户注册ToolStripMenuItem.Click += new System.EventHandler(this.新用户注册ToolStripMenuItem_Click);
             // 
             // 用户信息修改ToolStripMenuItem
             // 
             this.用户信息修改ToolStripMenuItem.Name = "用户信息修改ToolStripMenuItem";
-            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.用户信息修改ToolStripMenuItem.Text = "用户信息修改";
             this.用户信息修改ToolStripMenuItem.Click += new System.EventHandler(this.用户信息修改ToolStripMenuItem_Click);
+            // 
+            // 热门推荐ToolStripMenuItem
+            // 
+            this.热门推荐ToolStripMenuItem.Name = "热门推荐ToolStripMenuItem";
+            this.热门推荐ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.热门推荐ToolStripMenuItem.Text = "热门推荐";
+            this.热门推荐ToolStripMenuItem.Click += new System.EventHandler(this.热门推荐ToolStripMenuItem_Click);
             // 
             // 书籍管理BToolStripMenuItem
             // 
@@ -355,6 +373,75 @@
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.label1_1);
+            this.groupControl1.Controls.Add(this.label5);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.label3);
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Location = new System.Drawing.Point(374, 111);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(294, 217);
+            this.groupControl1.TabIndex = 5;
+            this.groupControl1.Text = "热门推荐";
+            // 
+            // label1_1
+            // 
+            this.label1_1.AutoSize = true;
+            this.label1_1.Location = new System.Drawing.Point(104, 34);
+            this.label1_1.Name = "label1_1";
+            this.label1_1.Size = new System.Drawing.Size(38, 14);
+            this.label1_1.TabIndex = 5;
+            this.label1_1.Text = "label6";
+            this.label1_1.Click += new System.EventHandler(this.label1_1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 14);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Top5:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(49, 151);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 14);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Top4:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(49, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 14);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Top3:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 14);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Top2:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Top1：";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -362,6 +449,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(680, 411);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -376,6 +464,9 @@
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +508,13 @@
         private System.Windows.Forms.ToolStripStatusLabel adadssadasdsadas;
         private System.Windows.Forms.ToolStripStatusLabel xxx;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private System.Windows.Forms.Label label1_1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem 热门推荐ToolStripMenuItem;
     }
 }

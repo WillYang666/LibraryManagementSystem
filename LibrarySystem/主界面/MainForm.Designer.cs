@@ -72,6 +72,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2_2 = new System.Windows.Forms.Label();
+            this.label3_3 = new System.Windows.Forms.Label();
+            this.label4_4 = new System.Windows.Forms.Label();
+            this.label5_5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -105,21 +109,21 @@
             // 新用户注册ToolStripMenuItem
             // 
             this.新用户注册ToolStripMenuItem.Name = "新用户注册ToolStripMenuItem";
-            this.新用户注册ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新用户注册ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.新用户注册ToolStripMenuItem.Text = "新用户注册";
             this.新用户注册ToolStripMenuItem.Click += new System.EventHandler(this.新用户注册ToolStripMenuItem_Click);
             // 
             // 用户信息修改ToolStripMenuItem
             // 
             this.用户信息修改ToolStripMenuItem.Name = "用户信息修改ToolStripMenuItem";
-            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.用户信息修改ToolStripMenuItem.Text = "用户信息修改";
             this.用户信息修改ToolStripMenuItem.Click += new System.EventHandler(this.用户信息修改ToolStripMenuItem_Click);
             // 
             // 热门推荐ToolStripMenuItem
             // 
             this.热门推荐ToolStripMenuItem.Name = "热门推荐ToolStripMenuItem";
-            this.热门推荐ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.热门推荐ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.热门推荐ToolStripMenuItem.Text = "热门推荐";
             this.热门推荐ToolStripMenuItem.Click += new System.EventHandler(this.热门推荐ToolStripMenuItem_Click);
             // 
@@ -375,15 +379,19 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.label5_5);
+            this.groupControl1.Controls.Add(this.label4_4);
+            this.groupControl1.Controls.Add(this.label3_3);
+            this.groupControl1.Controls.Add(this.label2_2);
             this.groupControl1.Controls.Add(this.label1_1);
             this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Location = new System.Drawing.Point(374, 111);
+            this.groupControl1.Location = new System.Drawing.Point(433, 113);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(294, 217);
+            this.groupControl1.Size = new System.Drawing.Size(225, 209);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "热门推荐";
             // 
@@ -441,6 +449,42 @@
             this.label1.Size = new System.Drawing.Size(48, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "Top1：";
+            // 
+            // label2_2
+            // 
+            this.label2_2.AutoSize = true;
+            this.label2_2.Location = new System.Drawing.Point(104, 72);
+            this.label2_2.Name = "label2_2";
+            this.label2_2.Size = new System.Drawing.Size(38, 14);
+            this.label2_2.TabIndex = 6;
+            this.label2_2.Text = "label6";
+            // 
+            // label3_3
+            // 
+            this.label3_3.AutoSize = true;
+            this.label3_3.Location = new System.Drawing.Point(104, 110);
+            this.label3_3.Name = "label3_3";
+            this.label3_3.Size = new System.Drawing.Size(38, 14);
+            this.label3_3.TabIndex = 7;
+            this.label3_3.Text = "label6";
+            // 
+            // label4_4
+            // 
+            this.label4_4.AutoSize = true;
+            this.label4_4.Location = new System.Drawing.Point(104, 151);
+            this.label4_4.Name = "label4_4";
+            this.label4_4.Size = new System.Drawing.Size(38, 14);
+            this.label4_4.TabIndex = 8;
+            this.label4_4.Text = "label6";
+            // 
+            // label5_5
+            // 
+            this.label5_5.AutoSize = true;
+            this.label5_5.Location = new System.Drawing.Point(104, 188);
+            this.label5_5.Name = "label5_5";
+            this.label5_5.Size = new System.Drawing.Size(38, 14);
+            this.label5_5.TabIndex = 9;
+            this.label5_5.Text = "label6";
             // 
             // MainForm
             // 
@@ -516,5 +560,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem 热门推荐ToolStripMenuItem;
+        private System.Windows.Forms.Label label5_5;
+        private System.Windows.Forms.Label label4_4;
+        private System.Windows.Forms.Label label3_3;
+        private System.Windows.Forms.Label label2_2;
     }
 }

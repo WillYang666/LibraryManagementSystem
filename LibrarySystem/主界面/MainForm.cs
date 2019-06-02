@@ -63,13 +63,15 @@ namespace LibrarySystem
                 Add_Books.Visible = false;
             }
             //热门推荐
-           /* string sql = "select 书名,排行 from Book_Recommend";         
+            string sql = "select 书名,排行 from Book_Recommend";         
             DataTable dt = new DataTable();
             DataBaseApplication.ExecuteNonQuery(sql);
             dt = DataBaseApplication.GetDataTableValue(sql);
-            label1_1.Text = dt.Rows[0][1].ToString();
-            */
-
+            label1_1.Text = dt.Rows[0][0].ToString();
+            label2_2.Text = dt.Rows[1][0].ToString();
+            label3_3.Text = dt.Rows[2][0].ToString();
+            label4_4.Text = dt.Rows[3][0].ToString();
+            label5_5.Text = dt.Rows[4][0].ToString();
         }
 
         private void Add_User_Click(object sender, EventArgs e)

@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WriteComment));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.submit = new System.Windows.Forms.Button();
             this.textBox_BookName = new System.Windows.Forms.TextBox();
             this.label_BookName = new System.Windows.Forms.Label();
-            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.submit = new System.Windows.Forms.Button();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.label_Rate = new System.Windows.Forms.Label();
+            this.textBox_Rate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -50,6 +52,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBox_Rate);
+            this.splitContainer1.Panel1.Controls.Add(this.label_Rate);
             this.splitContainer1.Panel1.Controls.Add(this.submit);
             this.splitContainer1.Panel1.Controls.Add(this.textBox_BookName);
             this.splitContainer1.Panel1.Controls.Add(this.label_BookName);
@@ -60,6 +64,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(533, 331);
             this.splitContainer1.SplitterDistance = 47;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // submit
+            // 
+            this.submit.Location = new System.Drawing.Point(371, 9);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(75, 23);
+            this.submit.TabIndex = 2;
+            this.submit.Text = "提交";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // textBox_BookName
             // 
@@ -79,15 +93,6 @@
             this.label_BookName.TabIndex = 0;
             this.label_BookName.Text = "书名：";
             // 
-            // skinEngine1
-            // 
-            this.skinEngine1.@__DrawButtonFocusRectangle = true;
-            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
-            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
-            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.skinEngine1.SerialNumber = "";
-            this.skinEngine1.SkinFile = null;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -97,15 +102,35 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // submit
+            // skinEngine1
             // 
-            this.submit.Location = new System.Drawing.Point(209, 7);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(75, 23);
-            this.submit.TabIndex = 2;
-            this.submit.Text = "提交";
-            this.submit.UseVisualStyleBackColor = true;
-            this.submit.Click += new System.EventHandler(this.submit_Click);
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
+            // label_Rate
+            // 
+            this.label_Rate.AutoSize = true;
+            this.label_Rate.Location = new System.Drawing.Point(183, 12);
+            this.label_Rate.Name = "label_Rate";
+            this.label_Rate.Size = new System.Drawing.Size(41, 12);
+            this.label_Rate.TabIndex = 3;
+            this.label_Rate.Text = "评分：";
+            // 
+            // textBox_Rate
+            // 
+            this.textBox_Rate.Location = new System.Drawing.Point(230, 9);
+            this.textBox_Rate.Name = "textBox_Rate";
+            this.textBox_Rate.ReadOnly = true;
+            this.textBox_Rate.Size = new System.Drawing.Size(100, 21);
+            this.textBox_Rate.TabIndex = 4;
+            this.textBox_Rate.TextChanged += new System.EventHandler(this.textBox_Rate_TextChanged);
+            this.textBox_Rate.Enter += new System.EventHandler(this.textBox_Rate_Enter);
+            this.textBox_Rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rate_KeyPress);
+            this.textBox_Rate.Leave += new System.EventHandler(this.textBox_Rate_Leave);
             // 
             // WriteComment
             // 
@@ -134,5 +159,7 @@
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox_Rate;
+        private System.Windows.Forms.Label label_Rate;
     }
 }

@@ -69,6 +69,8 @@
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(100, 21);
             this.textBox_id.TabIndex = 2;
+            this.textBox_id.Enter += new System.EventHandler(this.textBox_id_Enter);
+            this.textBox_id.Leave += new System.EventHandler(this.textBox_id_Leave);
             // 
             // textBox_password
             // 
@@ -77,6 +79,8 @@
             this.textBox_password.Size = new System.Drawing.Size(100, 21);
             this.textBox_password.TabIndex = 3;
             this.textBox_password.UseSystemPasswordChar = true;
+            this.textBox_password.Enter += new System.EventHandler(this.textBox_password_Enter);
+            this.textBox_password.Leave += new System.EventHandler(this.textBox_password_Leave);
             // 
             // btn_login
             // 

@@ -35,7 +35,6 @@
             this.新书入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.注销书籍ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.跳转到首页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.前一页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,8 +89,7 @@
             this.书籍ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新书入库ToolStripMenuItem,
             this.修改ToolStripMenuItem,
-            this.刷新ToolStripMenuItem,
-            this.注销书籍ToolStripMenuItem});
+            this.刷新ToolStripMenuItem});
             this.书籍ToolStripMenuItem.Name = "书籍ToolStripMenuItem";
             this.书籍ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
             this.书籍ToolStripMenuItem.Text = "书籍(B)";
@@ -99,26 +97,21 @@
             // 新书入库ToolStripMenuItem
             // 
             this.新书入库ToolStripMenuItem.Name = "新书入库ToolStripMenuItem";
-            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新书入库ToolStripMenuItem.Text = "书籍入库";
+            this.新书入库ToolStripMenuItem.Click += new System.EventHandler(this.新书入库ToolStripMenuItem_Click);
             // 
             // 修改ToolStripMenuItem
             // 
             this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.修改ToolStripMenuItem.Text = "保存修改";
             // 
             // 刷新ToolStripMenuItem
             // 
             this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
-            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.刷新ToolStripMenuItem.Text = "刷新";
-            // 
-            // 注销书籍ToolStripMenuItem
-            // 
-            this.注销书籍ToolStripMenuItem.Name = "注销书籍ToolStripMenuItem";
-            this.注销书籍ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.注销书籍ToolStripMenuItem.Text = "注销书籍";
             // 
             // 视图ToolStripMenuItem
             // 
@@ -399,7 +392,6 @@
         private System.Windows.Forms.ToolStripMenuItem 新书入库ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 注销书籍ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视图ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 跳转到首页ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 前一页ToolStripMenuItem;

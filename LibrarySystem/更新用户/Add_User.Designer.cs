@@ -43,6 +43,8 @@
             this.textBox_Title = new System.Windows.Forms.TextBox();
             this.label_Name = new System.Windows.Forms.Label();
             this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.label_Point = new System.Windows.Forms.Label();
+            this.textBox_Point = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_ID
@@ -79,7 +81,7 @@
             // 
             this.label_email.AutoSize = true;
             this.label_email.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_email.Location = new System.Drawing.Point(54, 193);
+            this.label_email.Location = new System.Drawing.Point(54, 187);
             this.label_email.Name = "label_email";
             this.label_email.Size = new System.Drawing.Size(56, 16);
             this.label_email.TabIndex = 3;
@@ -110,7 +112,7 @@
             // 
             // textBox_email
             // 
-            this.textBox_email.Location = new System.Drawing.Point(116, 188);
+            this.textBox_email.Location = new System.Drawing.Point(116, 182);
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(100, 21);
             this.textBox_email.TabIndex = 7;
@@ -118,7 +120,7 @@
             // button_OK
             // 
             this.button_OK.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_OK.Location = new System.Drawing.Point(25, 236);
+            this.button_OK.Location = new System.Drawing.Point(25, 251);
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(101, 48);
             this.button_OK.TabIndex = 8;
@@ -129,7 +131,7 @@
             // button_Cancel
             // 
             this.button_Cancel.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_Cancel.Location = new System.Drawing.Point(154, 236);
+            this.button_Cancel.Location = new System.Drawing.Point(154, 251);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(101, 48);
             this.button_Cancel.TabIndex = 9;
@@ -171,11 +173,30 @@
             this.textBox_Name.Size = new System.Drawing.Size(100, 21);
             this.textBox_Name.TabIndex = 13;
             // 
+            // label_Point
+            // 
+            this.label_Point.AutoSize = true;
+            this.label_Point.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_Point.Location = new System.Drawing.Point(54, 219);
+            this.label_Point.Name = "label_Point";
+            this.label_Point.Size = new System.Drawing.Size(56, 16);
+            this.label_Point.TabIndex = 14;
+            this.label_Point.Text = "积分：";
+            // 
+            // textBox_Point
+            // 
+            this.textBox_Point.Location = new System.Drawing.Point(116, 219);
+            this.textBox_Point.Name = "textBox_Point";
+            this.textBox_Point.Size = new System.Drawing.Size(100, 21);
+            this.textBox_Point.TabIndex = 15;
+            // 
             // Add_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 311);
+            this.Controls.Add(this.textBox_Point);
+            this.Controls.Add(this.label_Point);
             this.Controls.Add(this.textBox_Name);
             this.Controls.Add(this.label_Name);
             this.Controls.Add(this.textBox_Title);
@@ -215,5 +236,7 @@
         private System.Windows.Forms.TextBox textBox_Title;
         private System.Windows.Forms.Label label_Name;
         private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.Label label_Point;
+        private System.Windows.Forms.TextBox textBox_Point;
     }
 }

@@ -164,9 +164,18 @@ namespace LibrarySystem
 
         private void 用户信息查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_User add = new Add_User();
-            add.type = "3";
-            add.ShowDialog();
+            if (level1 == "管理员")
+            {
+                Edit_User edit = new Edit_User();
+                edit.ShowDialog();
+            }
+            if(level1=="用户")
+            {
+                Add_User add = new Add_User();
+                add.type = "4";
+                add.ShowDialog();
+            }
+               
         }
 
         private void Help_Click(object sender, EventArgs e)

@@ -46,6 +46,9 @@ namespace LibrarySystem
             string sql1 = "update Books_Info set 库存数=库存数-1 where 书籍序列号='" + textBox_No.Text.ToString() + "' ";
             DataBaseApplication.ExecuteNonQuery(sql1);
             MessageBox.Show("借阅成功！");
+            //积分更新
+            string sqln = "update Login_ID set 积分=积分+1 where 账号='" + textBox_ID.Text.ToString() + "' ";
+            DataBaseApplication.ExecuteNonQuery(sqln);
             this.Close();
         }
 

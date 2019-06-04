@@ -33,7 +33,7 @@ namespace LibrarySystem
 
         private void submit_Click(object sender, EventArgs e)
         {
-            string sql="insert into IMDB values('"+richTextBox1.Text.ToString()+"','"+PublicPassBy.IMDB_Bookname+"','"+PublicPassBy.IMDB_Bookid+"','"+PublicPassBy.id+"')";
+            string sql="insert into IMDB values('"+richTextBox1.Text.ToString()+"','"+PublicPassBy.IMDB_Bookname+"','"+PublicPassBy.IMDB_Bookid+"','"+PublicPassBy.id+"','"+textBox_Rate+"')";
             DataBaseApplication.ExecuteNonQuery(sql);
             DialogResult result = MessageBox.Show("确认提交？", "温馨提示", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
@@ -42,6 +42,44 @@ namespace LibrarySystem
                 MessageBox.Show("提交成功！");
             }
             this.Close();
+        }
+
+        private void textBox_Rate_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        //默认文本框
+        #region
+        private void textBox_Rate_Enter(object sender, EventArgs e)
+        {
+            if (this.textBox_Rate.Text == "请您打分（0-5）！")
+            {
+                this.textBox_Rate.Text = "";
+            }
+        }
+
+        private void textBox_Rate_Leave(object sender, EventArgs e)
+        {
+            if (this.textBox_Rate.Text.Length == 0)
+            {
+                this.textBox_Rate.Text = "请您打分（0-5）！";
+            }
+        }
+        #endregion
+
+        private void textBox_Rate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //只允许输入0～9中间的数字，你可以修改允许输入的字符的e.keychar值达到你的需求。
+            if (e.KeyChar >= '0' && e.KeyChar <= '5')
+            {
+                e.Handled = false;
+                return;
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
         }
     }
 }

@@ -55,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(91, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "书籍序列号：";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,6 +66,7 @@
             this.label2.Size = new System.Drawing.Size(49, 14);
             this.label2.TabIndex = 1;
             this.label2.Text = "书名：";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -75,6 +77,7 @@
             this.label3.Size = new System.Drawing.Size(49, 14);
             this.label3.TabIndex = 2;
             this.label3.Text = "作者：";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -85,6 +88,7 @@
             this.label4.Size = new System.Drawing.Size(63, 14);
             this.label4.TabIndex = 3;
             this.label4.Text = "出版社：";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -95,6 +99,7 @@
             this.label5.Size = new System.Drawing.Size(49, 14);
             this.label5.TabIndex = 4;
             this.label5.Text = "价格：";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -105,6 +110,7 @@
             this.label6.Size = new System.Drawing.Size(63, 14);
             this.label6.TabIndex = 5;
             this.label6.Text = "库存数：";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox_No
             // 
@@ -112,6 +118,7 @@
             this.textBox_No.Name = "textBox_No";
             this.textBox_No.Size = new System.Drawing.Size(100, 21);
             this.textBox_No.TabIndex = 6;
+            this.textBox_No.TextChanged += new System.EventHandler(this.textBox_No_TextChanged);
             // 
             // textBox_BookName
             // 
@@ -119,6 +126,7 @@
             this.textBox_BookName.Name = "textBox_BookName";
             this.textBox_BookName.Size = new System.Drawing.Size(100, 21);
             this.textBox_BookName.TabIndex = 7;
+            this.textBox_BookName.TextChanged += new System.EventHandler(this.textBox_BookName_TextChanged);
             // 
             // textBox_Author
             // 
@@ -126,6 +134,7 @@
             this.textBox_Author.Name = "textBox_Author";
             this.textBox_Author.Size = new System.Drawing.Size(100, 21);
             this.textBox_Author.TabIndex = 8;
+            this.textBox_Author.TextChanged += new System.EventHandler(this.textBox_Author_TextChanged);
             // 
             // textBox_Press
             // 
@@ -133,6 +142,7 @@
             this.textBox_Press.Name = "textBox_Press";
             this.textBox_Press.Size = new System.Drawing.Size(100, 21);
             this.textBox_Press.TabIndex = 9;
+            this.textBox_Press.TextChanged += new System.EventHandler(this.textBox_Press_TextChanged);
             // 
             // textBox_Price
             // 
@@ -140,6 +150,7 @@
             this.textBox_Price.Name = "textBox_Price";
             this.textBox_Price.Size = new System.Drawing.Size(100, 21);
             this.textBox_Price.TabIndex = 10;
+            this.textBox_Price.TextChanged += new System.EventHandler(this.textBox_Price_TextChanged);
             // 
             // textBox_Storage
             // 
@@ -147,6 +158,7 @@
             this.textBox_Storage.Name = "textBox_Storage";
             this.textBox_Storage.Size = new System.Drawing.Size(100, 21);
             this.textBox_Storage.TabIndex = 11;
+            this.textBox_Storage.TextChanged += new System.EventHandler(this.textBox_Storage_TextChanged);
             // 
             // button1
             // 

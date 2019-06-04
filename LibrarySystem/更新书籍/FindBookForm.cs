@@ -102,6 +102,13 @@ namespace LibrarySystem
             }
 
             tSSL5.Text = "  " + PublicPassBy._name;
+            //权限判断
+            if (level1 == "用户")
+            {
+                书籍入库tSBtn.Visible = false;
+                Edit_Book_Info.Visible = false;
+                新书入库ToolStripMenuItem.Visible = false;
+            }
         }
 
         private void xxx_Click(object sender, EventArgs e)
@@ -112,6 +119,12 @@ namespace LibrarySystem
         private void timer1_Tick(object sender, EventArgs e)
         {
             xxx.Text = DateTime.Now.ToString();
+        }
+
+        private void 新书入库ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Book add = new Add_Book();
+            add.ShowDialog();
         }
     }
 }

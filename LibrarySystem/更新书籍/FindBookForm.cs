@@ -66,8 +66,9 @@ namespace LibrarySystem
             }
             Add_Book edit = new Add_Book();
             edit.type = "2";
-            edit.select_ID = (string)dataGridView1.CurrentCell.Value;
-            //edit.select_ID = this.dataGridView1.SelectedRows[1].Cells[1].Value.ToString();//获取选中行的第一个单元格的值
+            // edit.select_ID = (string)dataGridView1.CurrentCell.Value;
+            int a = dataGridView1.CurrentRow.Index;
+            edit.select_ID = dataGridView1.Rows[a].Cells["书籍序列号"].Value.ToString();
             if ((string)dataGridView1.CurrentCell.Value == "")
             {
                 MessageBox.Show("你没选中");
@@ -108,6 +109,7 @@ namespace LibrarySystem
                 书籍入库tSBtn.Visible = false;
                 Edit_Book_Info.Visible = false;
                 新书入库ToolStripMenuItem.Visible = false;
+                button_FindAllBook.Visible = false;
             }
         }
 
@@ -125,6 +127,15 @@ namespace LibrarySystem
         {
             Add_Book add = new Add_Book();
             add.ShowDialog();
+        }
+
+        private void button_FindAllBook_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from Books_Info ";
+            DataTable dt = new DataTable();
+            dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
+            dataGridView1.DataSource = dt;
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace LibrarySystem
     public partial class Add_User : Form
     {
         public string select_ID;
-        public string type;//1添加，2管理员修改,3用户修改
+        public string type;//1添加(用户注册），2管理员修改,3用户修改
         public long p,q,k;//防错定义
         public int m;//防错定义
         public Add_User()
@@ -61,7 +61,7 @@ namespace LibrarySystem
                 //积分不可修改
                 textBox_Point.ReadOnly = true;
             }
-            if(type=="4")
+            if(type=="4")//用户自己查询
             {
                 string sql = "select * from Login_ID where 姓名='" + PublicPassBy._name + "'";
                 DataTable dt = new DataTable();

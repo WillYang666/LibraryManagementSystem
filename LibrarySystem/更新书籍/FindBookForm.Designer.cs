@@ -66,6 +66,7 @@
             this.xxx = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.button_FindAllBook = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,20 +98,20 @@
             // 新书入库ToolStripMenuItem
             // 
             this.新书入库ToolStripMenuItem.Name = "新书入库ToolStripMenuItem";
-            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.新书入库ToolStripMenuItem.Text = "书籍入库";
             this.新书入库ToolStripMenuItem.Click += new System.EventHandler(this.新书入库ToolStripMenuItem_Click);
             // 
             // 修改ToolStripMenuItem
             // 
             this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.修改ToolStripMenuItem.Text = "保存修改";
             // 
             // 刷新ToolStripMenuItem
             // 
             this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
-            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.刷新ToolStripMenuItem.Text = "刷新";
             // 
             // 视图ToolStripMenuItem
@@ -360,11 +361,22 @@
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
+            // button_FindAllBook
+            // 
+            this.button_FindAllBook.Location = new System.Drawing.Point(522, 35);
+            this.button_FindAllBook.Name = "button_FindAllBook";
+            this.button_FindAllBook.Size = new System.Drawing.Size(89, 23);
+            this.button_FindAllBook.TabIndex = 6;
+            this.button_FindAllBook.Text = "查看所有书籍";
+            this.button_FindAllBook.UseVisualStyleBackColor = true;
+            this.button_FindAllBook.Click += new System.EventHandler(this.button_FindAllBook_Click);
+            // 
             // FindBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 397);
+            this.Controls.Add(this.button_FindAllBook);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
@@ -423,5 +435,6 @@
         private System.Windows.Forms.ToolStripStatusLabel xxx;
         private System.Windows.Forms.Timer timer1;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.Button button_FindAllBook;
     }
 }

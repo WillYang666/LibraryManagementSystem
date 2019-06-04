@@ -76,9 +76,17 @@ namespace LibrarySystem
 
         private void Add_User_Click(object sender, EventArgs e)
         {
-            Add_User add =new Add_User();
-            add.type = "1";
-            add.ShowDialog();
+            if(level1=="管理员")
+            {
+                Edit_User edit = new Edit_User();
+                edit.ShowDialog();
+            }
+            if (level1 == "用户")
+            {
+                Add_User add = new Add_User();
+                add.type = "3";
+                add.ShowDialog();
+            }
         }
 
         private void Edit_Info_Click(object sender, EventArgs e)

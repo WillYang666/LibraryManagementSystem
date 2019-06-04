@@ -150,22 +150,26 @@ namespace LibrarySystem
                 this.textBox_id.Text = "请输入您的账号！";
             }
         }
-
+        
         private void textBox_password_Enter(object sender, EventArgs e)
         {
-            if (this.textBox_password.Text == "请输入密码！")
+          /*  if (this.textBox_password.Text == "请输入密码！")
             {
                 this.textBox_password.Text = "";
             }
+            */
         }
 
         private void textBox_password_Leave(object sender, EventArgs e)
         {
-            if(this.textBox_password.Text.Length==0)
+          /*  if(this.textBox_password.Text.Length==0)
             {
                 this.textBox_password.Text = "请输入密码！";
+                this.textBox_password.UseSystemPasswordChar = false;
             }
+            */
         }
+        
     }
    
 

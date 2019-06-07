@@ -31,12 +31,18 @@ namespace LibrarySystem
             dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
             dataGridView1.DataSource = dt;
             //书评展示
-            string sql1 = "select 书评 from IMDB where 书名='" + Select_ID + "'";
+            string sql1 = "select 书评,评分 from IMDB where 书名='" + Select_ID + "'";
             DataBaseApplication.ExecuteNonQuery(sql1);
             DataTable dt1 = new DataTable();
             dt1 = DataBaseApplication.GetDataTableValue(sql1);
             dataGridView2.DataSource = dt1;
-
+            //平均分
+            string sql2 = "select avg(评分) from IMDB where 书名='" + Select_ID + "'";
+            DataBaseApplication.ExecuteNonQuery(sql2);
+            DataTable dt2 = new DataTable();
+            dt2 = DataBaseApplication.GetDataTableValue(sql2);
+            avgRate.Text = dt2.Rows[0][0].ToString();
+            
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)

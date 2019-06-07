@@ -36,6 +36,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.avgRate = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -51,7 +53,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator2,
             this.查看帮助tSBtn,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripLabel1,
+            this.avgRate});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(499, 39);
@@ -121,6 +125,18 @@
             this.dataGridView2.Size = new System.Drawing.Size(499, 145);
             this.dataGridView2.TabIndex = 0;
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(56, 36);
+            this.toolStripLabel1.Text = "总评分：";
+            // 
+            // avgRate
+            // 
+            this.avgRate.Name = "avgRate";
+            this.avgRate.Size = new System.Drawing.Size(96, 36);
+            this.avgRate.Text = "toolStripLabel2";
+            // 
             // BorrowBook1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -153,5 +169,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel avgRate;
     }
 }

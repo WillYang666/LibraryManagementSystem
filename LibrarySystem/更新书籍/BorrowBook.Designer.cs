@@ -182,6 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(259, 361);
             this.Controls.Add(this.textBox_Who);
             this.Controls.Add(this.label_Who);
@@ -198,6 +199,8 @@
             this.Controls.Add(this.textBox_No);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BorrowBook";
             this.Text = "书籍借阅";
             this.Load += new System.EventHandler(this.BorrowBook_Load);

@@ -194,6 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(289, 311);
             this.Controls.Add(this.textBox_Point);
             this.Controls.Add(this.label_Point);
@@ -212,6 +213,8 @@
             this.Controls.Add(this.label_Password);
             this.Controls.Add(this.label_ID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Add_User";
             this.Text = "更新用户";
             this.Load += new System.EventHandler(this.Add_User_Load);

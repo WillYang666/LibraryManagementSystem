@@ -112,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(264, 207);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -121,6 +122,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BookRecommendReader";
             this.Text = "读者书籍推荐";
             this.ResumeLayout(false);

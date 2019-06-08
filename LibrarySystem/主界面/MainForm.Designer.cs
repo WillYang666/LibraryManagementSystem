@@ -66,16 +66,16 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.label5_5 = new System.Windows.Forms.Label();
+            this.label4_4 = new System.Windows.Forms.Label();
+            this.label3_3 = new System.Windows.Forms.Label();
+            this.label2_2 = new System.Windows.Forms.Label();
             this.label1_1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2_2 = new System.Windows.Forms.Label();
-            this.label3_3 = new System.Windows.Forms.Label();
-            this.label4_4 = new System.Windows.Forms.Label();
-            this.label5_5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -395,6 +395,42 @@
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "热门推荐";
             // 
+            // label5_5
+            // 
+            this.label5_5.AutoSize = true;
+            this.label5_5.Location = new System.Drawing.Point(104, 188);
+            this.label5_5.Name = "label5_5";
+            this.label5_5.Size = new System.Drawing.Size(38, 14);
+            this.label5_5.TabIndex = 9;
+            this.label5_5.Text = "label6";
+            // 
+            // label4_4
+            // 
+            this.label4_4.AutoSize = true;
+            this.label4_4.Location = new System.Drawing.Point(104, 151);
+            this.label4_4.Name = "label4_4";
+            this.label4_4.Size = new System.Drawing.Size(38, 14);
+            this.label4_4.TabIndex = 8;
+            this.label4_4.Text = "label6";
+            // 
+            // label3_3
+            // 
+            this.label3_3.AutoSize = true;
+            this.label3_3.Location = new System.Drawing.Point(104, 110);
+            this.label3_3.Name = "label3_3";
+            this.label3_3.Size = new System.Drawing.Size(38, 14);
+            this.label3_3.TabIndex = 7;
+            this.label3_3.Text = "label6";
+            // 
+            // label2_2
+            // 
+            this.label2_2.AutoSize = true;
+            this.label2_2.Location = new System.Drawing.Point(104, 72);
+            this.label2_2.Name = "label2_2";
+            this.label2_2.Size = new System.Drawing.Size(38, 14);
+            this.label2_2.TabIndex = 6;
+            this.label2_2.Text = "label6";
+            // 
             // label1_1
             // 
             this.label1_1.AutoSize = true;
@@ -449,42 +485,6 @@
             this.label1.Size = new System.Drawing.Size(48, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "Top1：";
-            // 
-            // label2_2
-            // 
-            this.label2_2.AutoSize = true;
-            this.label2_2.Location = new System.Drawing.Point(104, 72);
-            this.label2_2.Name = "label2_2";
-            this.label2_2.Size = new System.Drawing.Size(38, 14);
-            this.label2_2.TabIndex = 6;
-            this.label2_2.Text = "label6";
-            // 
-            // label3_3
-            // 
-            this.label3_3.AutoSize = true;
-            this.label3_3.Location = new System.Drawing.Point(104, 110);
-            this.label3_3.Name = "label3_3";
-            this.label3_3.Size = new System.Drawing.Size(38, 14);
-            this.label3_3.TabIndex = 7;
-            this.label3_3.Text = "label6";
-            // 
-            // label4_4
-            // 
-            this.label4_4.AutoSize = true;
-            this.label4_4.Location = new System.Drawing.Point(104, 151);
-            this.label4_4.Name = "label4_4";
-            this.label4_4.Size = new System.Drawing.Size(38, 14);
-            this.label4_4.TabIndex = 8;
-            this.label4_4.Text = "label6";
-            // 
-            // label5_5
-            // 
-            this.label5_5.AutoSize = true;
-            this.label5_5.Location = new System.Drawing.Point(104, 188);
-            this.label5_5.Name = "label5_5";
-            this.label5_5.Size = new System.Drawing.Size(38, 14);
-            this.label5_5.TabIndex = 9;
-            this.label5_5.Text = "label6";
             // 
             // MainForm
             // 

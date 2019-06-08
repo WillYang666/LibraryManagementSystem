@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
+            this.OK = new System.Windows.Forms.Button();
+            this.textBox_top5 = new System.Windows.Forms.TextBox();
+            this.textBox_top4 = new System.Windows.Forms.TextBox();
+            this.textBox_top3 = new System.Windows.Forms.TextBox();
+            this.textBox_top2 = new System.Windows.Forms.TextBox();
+            this.textBox_top1 = new System.Windows.Forms.TextBox();
             this.label1_1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_top1 = new System.Windows.Forms.TextBox();
-            this.textBox_top2 = new System.Windows.Forms.TextBox();
-            this.textBox_top3 = new System.Windows.Forms.TextBox();
-            this.textBox_top4 = new System.Windows.Forms.TextBox();
-            this.textBox_top5 = new System.Windows.Forms.TextBox();
-            this.OK = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,71 @@
             this.groupControl1.Size = new System.Drawing.Size(333, 287);
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "热门推荐";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(246, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "清空数据";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cancel
+            // 
+            this.cancel.Location = new System.Drawing.Point(168, 228);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(100, 37);
+            this.cancel.TabIndex = 12;
+            this.cancel.Text = "取消";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // OK
+            // 
+            this.OK.Location = new System.Drawing.Point(33, 228);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(100, 37);
+            this.OK.TabIndex = 11;
+            this.OK.Text = "确定";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
+            // 
+            // textBox_top5
+            // 
+            this.textBox_top5.Location = new System.Drawing.Point(103, 185);
+            this.textBox_top5.Name = "textBox_top5";
+            this.textBox_top5.Size = new System.Drawing.Size(100, 22);
+            this.textBox_top5.TabIndex = 10;
+            // 
+            // textBox_top4
+            // 
+            this.textBox_top4.Location = new System.Drawing.Point(103, 148);
+            this.textBox_top4.Name = "textBox_top4";
+            this.textBox_top4.Size = new System.Drawing.Size(100, 22);
+            this.textBox_top4.TabIndex = 9;
+            // 
+            // textBox_top3
+            // 
+            this.textBox_top3.Location = new System.Drawing.Point(103, 110);
+            this.textBox_top3.Name = "textBox_top3";
+            this.textBox_top3.Size = new System.Drawing.Size(100, 22);
+            this.textBox_top3.TabIndex = 8;
+            // 
+            // textBox_top2
+            // 
+            this.textBox_top2.Location = new System.Drawing.Point(103, 72);
+            this.textBox_top2.Name = "textBox_top2";
+            this.textBox_top2.Size = new System.Drawing.Size(100, 22);
+            this.textBox_top2.TabIndex = 7;
+            // 
+            // textBox_top1
+            // 
+            this.textBox_top1.Location = new System.Drawing.Point(103, 31);
+            this.textBox_top1.Name = "textBox_top1";
+            this.textBox_top1.Size = new System.Drawing.Size(100, 22);
+            this.textBox_top1.TabIndex = 6;
             // 
             // label1_1
             // 
@@ -123,77 +188,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Top1：";
             // 
-            // textBox_top1
-            // 
-            this.textBox_top1.Location = new System.Drawing.Point(103, 31);
-            this.textBox_top1.Name = "textBox_top1";
-            this.textBox_top1.Size = new System.Drawing.Size(100, 22);
-            this.textBox_top1.TabIndex = 6;
-            // 
-            // textBox_top2
-            // 
-            this.textBox_top2.Location = new System.Drawing.Point(103, 72);
-            this.textBox_top2.Name = "textBox_top2";
-            this.textBox_top2.Size = new System.Drawing.Size(100, 22);
-            this.textBox_top2.TabIndex = 7;
-            // 
-            // textBox_top3
-            // 
-            this.textBox_top3.Location = new System.Drawing.Point(103, 110);
-            this.textBox_top3.Name = "textBox_top3";
-            this.textBox_top3.Size = new System.Drawing.Size(100, 22);
-            this.textBox_top3.TabIndex = 8;
-            // 
-            // textBox_top4
-            // 
-            this.textBox_top4.Location = new System.Drawing.Point(103, 148);
-            this.textBox_top4.Name = "textBox_top4";
-            this.textBox_top4.Size = new System.Drawing.Size(100, 22);
-            this.textBox_top4.TabIndex = 9;
-            // 
-            // textBox_top5
-            // 
-            this.textBox_top5.Location = new System.Drawing.Point(103, 185);
-            this.textBox_top5.Name = "textBox_top5";
-            this.textBox_top5.Size = new System.Drawing.Size(100, 22);
-            this.textBox_top5.TabIndex = 10;
-            // 
-            // OK
-            // 
-            this.OK.Location = new System.Drawing.Point(33, 228);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(100, 37);
-            this.OK.TabIndex = 11;
-            this.OK.Text = "确定";
-            this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.OK_Click);
-            // 
-            // cancel
-            // 
-            this.cancel.Location = new System.Drawing.Point(168, 228);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(100, 37);
-            this.cancel.TabIndex = 12;
-            this.cancel.Text = "取消";
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(246, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "清空数据";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // BookRecommend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(333, 287);
             this.Controls.Add(this.groupControl1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BookRecommend";
             this.Text = "热门书籍推荐";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

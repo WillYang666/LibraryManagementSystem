@@ -12,6 +12,56 @@ namespace LibrarySystem
 {
     public partial class MainForm : Form
     {
+        //窗体放大控件也放大
+        #region
+        //------------------------------------------------------  控件大小随窗体大小变化
+        private float X;
+        private float Y;
+
+        private void setTag(Control cons)
+        {
+            foreach (Control con in cons.Controls)
+            {
+                con.Tag = con.Width + ":" + con.Height + ":" + con.Left + ":" + con.Top + ":" + con.Font.Size;
+                if (con.Controls.Count > 0)
+                    setTag(con);
+            }
+        }
+
+        private void setControls(float newx, float newy, Control cons)
+        {
+            foreach (Control con in cons.Controls)
+            {
+                string[] mytag = con.Tag.ToString().Split(new char[] { ':' });
+                float a = Convert.ToSingle(mytag[0]) * newx;
+                con.Width = (int)a;
+                a = Convert.ToSingle(mytag[1]) * newy;
+                con.Height = (int)(a);
+                a = Convert.ToSingle(mytag[2]) * newx;
+                con.Left = (int)(a);
+                a = Convert.ToSingle(mytag[3]) * newy;
+                con.Top = (int)(a);
+                Single currentSize = Convert.ToSingle(mytag[4]) * Math.Min(newx, newy);
+                con.Font = new Font(con.Font.Name, currentSize, con.Font.Style, con.Font.Unit);
+                if (con.Controls.Count > 0)
+                {
+                    setControls(newx, newy, con);
+                }
+            }
+
+        }
+
+        void MainForm_Resize(object sender, EventArgs e)
+        {
+            float newx = (this.Width) / X;
+            float newy = this.Height / Y;
+            setControls(newx, newy, this);
+            this.Text = this.Width.ToString() + " " + this.Height.ToString();
+
+        }
+        //--------------------------------------------------------------------------   控件大小随窗体大小变化结束
+        #endregion
+        //-----
         public string level1;
         public MainForm()
         {
@@ -72,6 +122,17 @@ namespace LibrarySystem
             label3_3.Text = dt.Rows[2][0].ToString();
             label4_4.Text = dt.Rows[3][0].ToString();
             label5_5.Text = dt.Rows[4][0].ToString();
+            //--------------------------------控件大小随窗体大小变化
+            this.Resize += new EventHandler(MainForm_Resize);
+
+            X = this.Width;
+            Y = this.Height;
+
+            setTag(this);
+            MainForm_Resize(new object(), new EventArgs());
+            //---------------------------------控件大小随窗体大小变化
+            
+
         }
 
         private void Add_User_Click(object sender, EventArgs e)

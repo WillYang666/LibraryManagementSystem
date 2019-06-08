@@ -66,7 +66,7 @@
             this.xxx = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
-            this.button_FindAllBook = new System.Windows.Forms.Button();
+            this.toolStripLabel_AllBooks = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -177,7 +177,8 @@
             this.toolStripLabel2,
             this.toolStripTextBox1,
             this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripLabel_AllBooks});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(623, 39);
@@ -361,22 +362,18 @@
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
-            // button_FindAllBook
+            // toolStripLabel_AllBooks
             // 
-            this.button_FindAllBook.Location = new System.Drawing.Point(522, 35);
-            this.button_FindAllBook.Name = "button_FindAllBook";
-            this.button_FindAllBook.Size = new System.Drawing.Size(89, 23);
-            this.button_FindAllBook.TabIndex = 6;
-            this.button_FindAllBook.Text = "查看所有书籍";
-            this.button_FindAllBook.UseVisualStyleBackColor = true;
-            this.button_FindAllBook.Click += new System.EventHandler(this.button_FindAllBook_Click);
+            this.toolStripLabel_AllBooks.Name = "toolStripLabel_AllBooks";
+            this.toolStripLabel_AllBooks.Size = new System.Drawing.Size(80, 36);
+            this.toolStripLabel_AllBooks.Text = "查看所有书籍";
+            this.toolStripLabel_AllBooks.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // FindBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 397);
-            this.Controls.Add(this.button_FindAllBook);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
@@ -435,6 +432,6 @@
         private System.Windows.Forms.ToolStripStatusLabel xxx;
         private System.Windows.Forms.Timer timer1;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
-        private System.Windows.Forms.Button button_FindAllBook;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel_AllBooks;
     }
 }

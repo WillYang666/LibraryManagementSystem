@@ -68,6 +68,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelToSQL\ExcelToSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelToSQL\ExcelToSQL.designer.cs">
+      <DependentUpon>ExcelToSQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="书籍推荐\BookRecommendReader.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="ClassStore\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassStore\SystemLog.cs" />
+    <EmbeddedResource Include="ExcelToSQL\ExcelToSQL.resx">
+      <DependentUpon>ExcelToSQL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="书籍推荐\BookRecommendReader.resx">
       <DependentUpon>BookRecommendReader.cs</DependentUpon>
     </EmbeddedResource>

@@ -174,5 +174,12 @@ namespace LibrarySystem
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ExcelToSQL ex = new ExcelToSQL();
+            ex.ShowDialog();
+            this.Close();
+        }
     }
 }

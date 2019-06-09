@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -189,12 +190,23 @@
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(132, 321);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(131, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "利用Excel表批量导入";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Add_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(275, 356);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_Storage);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -61,6 +61,8 @@ namespace LibrarySystem
                 Add_User.Visible = false;
                 新用户注册ToolStripMenuItem.Visible = false;
                 Add_Books.Visible = false;
+                热门推荐ToolStripMenuItem.Visible = false;
+                新书入库ToolStripMenuItem.Visible = false;
             }
             //热门推荐
             string sql = "select 书名,排行 from Book_Recommend";         
@@ -80,8 +82,9 @@ namespace LibrarySystem
         {
             if(level1=="管理员")
             {
-                Edit_User edit = new Edit_User();
-                edit.ShowDialog();
+                Add_User add = new Add_User();
+                add.type = "1";
+                add.ShowDialog();
             }
             if (level1 == "用户")
             {
@@ -116,8 +119,18 @@ namespace LibrarySystem
 
         private void 用户信息修改ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Edit_User edit = new Edit_User();
-            edit.ShowDialog();
+            if (PublicPassBy.level=="管理员")
+            {
+                Edit_User edit = new Edit_User();
+                edit.ShowDialog();
+            }
+            if (level1 == "用户")
+            {
+                Add_User edit = new Add_User();
+                edit.type = "3";
+                edit.ShowDialog();
+            }
+
         }
 
         private void Add_Books_Click(object sender, EventArgs e)
@@ -203,6 +216,23 @@ namespace LibrarySystem
             BookRecommend show = new BookRecommend();
             show.ShowDialog();
 
+        }
+
+        private void 书籍注销ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 借书办理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FindBookForm find = new FindBookForm();
+            find.ShowDialog();
+        }
+
+        private void 还书办理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnBook re = new ReturnBook();
+            re.ShowDialog();
         }
     }
 }

@@ -91,13 +91,13 @@ namespace LibrarySystem
             DataBaseApplication.UserID = "sa";
             DataBaseApplication.PassWord = "sa";
             //--------------------------------控件大小随窗体大小变化
-            this.Resize += new EventHandler(LoginForm_Resize);
+           /* this.Resize += new EventHandler(Form1_Resize);
 
             X = this.Width;
             Y = this.Height;
 
             setTag(this);
-            LoginForm_Resize(new object(), new EventArgs());
+            Form1_Resize(new object(), new EventArgs());*/
             //---------------------------------控件大小随窗体大小变化
        
 
@@ -191,7 +191,7 @@ namespace LibrarySystem
         private void sign_in_Click(object sender, EventArgs e)
         {
             Add_User sign = new Add_User();
-            sign.type = "1";
+            sign.type = "0";
             sign.ShowDialog();
         }
        

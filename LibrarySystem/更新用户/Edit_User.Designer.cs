@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox_Search = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.button_Edit);
             this.splitContainer1.Panel1.Controls.Add(this.textBox_Search);
             this.splitContainer1.Panel1.Controls.Add(this.button_Search);
@@ -135,6 +137,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(440, 281);
             this.dataGridView1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "查看全员数据";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Edit_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -145,6 +157,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit_User";
             this.Text = "修改信息";
+            this.Load += new System.EventHandler(this.Edit_User_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -166,5 +179,6 @@
         private System.Windows.Forms.TextBox textBox_Search;
         private System.Windows.Forms.Button button_Edit;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

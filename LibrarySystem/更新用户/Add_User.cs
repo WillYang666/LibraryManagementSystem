@@ -25,11 +25,18 @@ namespace LibrarySystem
         private void Add_User_Load(object sender, EventArgs e)
         {
             //注册界面
+            if(type=="0")//首页注册
+            {
+                textBox_Title.Text = "用户";
+                textBox_Title.ReadOnly = true;
+            }
             if (type == "1")
             {
+                if(PublicPassBy.level=="用户")
+                {
                     textBox_Title.Text = "用户";
                     textBox_Title.ReadOnly = true;
-                
+                }                      
             }
             if (type == "2")
             {
@@ -60,6 +67,8 @@ namespace LibrarySystem
                 textBox_Point.Text = dt.Rows[0][6].ToString();
                 //积分不可修改
                 textBox_Point.ReadOnly = true;
+                //用户属性不可改
+                textBox_Title.ReadOnly = true;
             }
             if(type=="4")//用户自己查询
             {

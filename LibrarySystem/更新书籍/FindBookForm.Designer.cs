@@ -54,6 +54,7 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel_AllBooks = new System.Windows.Forms.ToolStripLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tSSL5 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -66,7 +67,6 @@
             this.xxx = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
-            this.toolStripLabel_AllBooks = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -273,8 +273,16 @@
             this.toolStripButton2.ToolTipText = "办理借阅";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // toolStripLabel_AllBooks
+            // 
+            this.toolStripLabel_AllBooks.Name = "toolStripLabel_AllBooks";
+            this.toolStripLabel_AllBooks.Size = new System.Drawing.Size(80, 36);
+            this.toolStripLabel_AllBooks.Text = "查看所有书籍";
+            this.toolStripLabel_AllBooks.Click += new System.EventHandler(this.toolStripLabel3_Click);
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 64);
@@ -361,13 +369,6 @@
             this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
-            // 
-            // toolStripLabel_AllBooks
-            // 
-            this.toolStripLabel_AllBooks.Name = "toolStripLabel_AllBooks";
-            this.toolStripLabel_AllBooks.Size = new System.Drawing.Size(80, 36);
-            this.toolStripLabel_AllBooks.Text = "查看所有书籍";
-            this.toolStripLabel_AllBooks.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // FindBookForm
             // 

@@ -51,10 +51,13 @@ namespace LibrarySystem
 
             tSSL5.Text = "  " + PublicPassBy._name;
             //
-            string sql = "select * from Borrow_List where 借阅人账号='" + PublicPassBy.id + "'";
-            DataTable dt = new DataTable();
-            dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
-            dataGridView1.DataSource = dt;
+            if(PublicPassBy.level=="用户")
+            {
+                string sql = "select * from Borrow_List where 借阅人账号='" + PublicPassBy.id + "'";
+                DataTable dt = new DataTable();
+                dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
+                dataGridView1.DataSource = dt;
+            }       
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -98,9 +101,14 @@ namespace LibrarySystem
 
         private void send_email_Click(object sender, EventArgs e)
         {
-            PublicPassBy.email = (string)dataGridView1.CurrentRow.Cells[6].Value;
-            Email em = new Email();
-            em.ShowDialog();
+            if (dataGridView1.DataSource != null)
+            {
+                PublicPassBy.email = (string)dataGridView1.CurrentRow.Cells[6].Value;
+                Email em = new Email();
+                em.ShowDialog();
+            }
+            else MessageBox.Show("未选中内容！");
+                
         }
 
         private void btn_all_Click(object sender, EventArgs e)

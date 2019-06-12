@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WriteComment));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox_Rate = new System.Windows.Forms.TextBox();
+            this.label_Rate = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
             this.textBox_BookName = new System.Windows.Forms.TextBox();
             this.label_BookName = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
-            this.label_Rate = new System.Windows.Forms.Label();
-            this.textBox_Rate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,6 +64,26 @@
             this.splitContainer1.Size = new System.Drawing.Size(533, 331);
             this.splitContainer1.SplitterDistance = 47;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // textBox_Rate
+            // 
+            this.textBox_Rate.Location = new System.Drawing.Point(230, 9);
+            this.textBox_Rate.Name = "textBox_Rate";
+            this.textBox_Rate.Size = new System.Drawing.Size(100, 21);
+            this.textBox_Rate.TabIndex = 4;
+            this.textBox_Rate.TextChanged += new System.EventHandler(this.textBox_Rate_TextChanged);
+            this.textBox_Rate.Enter += new System.EventHandler(this.textBox_Rate_Enter);
+            this.textBox_Rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rate_KeyPress);
+            this.textBox_Rate.Leave += new System.EventHandler(this.textBox_Rate_Leave);
+            // 
+            // label_Rate
+            // 
+            this.label_Rate.AutoSize = true;
+            this.label_Rate.Location = new System.Drawing.Point(183, 12);
+            this.label_Rate.Name = "label_Rate";
+            this.label_Rate.Size = new System.Drawing.Size(41, 12);
+            this.label_Rate.TabIndex = 3;
+            this.label_Rate.Text = "评分：";
             // 
             // submit
             // 
@@ -101,6 +121,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(533, 280);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // skinEngine1
             // 
@@ -110,27 +131,6 @@
             this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
-            // 
-            // label_Rate
-            // 
-            this.label_Rate.AutoSize = true;
-            this.label_Rate.Location = new System.Drawing.Point(183, 12);
-            this.label_Rate.Name = "label_Rate";
-            this.label_Rate.Size = new System.Drawing.Size(41, 12);
-            this.label_Rate.TabIndex = 3;
-            this.label_Rate.Text = "评分：";
-            // 
-            // textBox_Rate
-            // 
-            this.textBox_Rate.Location = new System.Drawing.Point(230, 9);
-            this.textBox_Rate.Name = "textBox_Rate";
-            this.textBox_Rate.ReadOnly = true;
-            this.textBox_Rate.Size = new System.Drawing.Size(100, 21);
-            this.textBox_Rate.TabIndex = 4;
-            this.textBox_Rate.TextChanged += new System.EventHandler(this.textBox_Rate_TextChanged);
-            this.textBox_Rate.Enter += new System.EventHandler(this.textBox_Rate_Enter);
-            this.textBox_Rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rate_KeyPress);
-            this.textBox_Rate.Leave += new System.EventHandler(this.textBox_Rate_Leave);
             // 
             // WriteComment
             // 

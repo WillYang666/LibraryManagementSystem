@@ -101,6 +101,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 39);
@@ -220,7 +221,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReturnBook";
-            this.Text = "ReturnBook";
+            this.Text = "书籍归还";
             this.Load += new System.EventHandler(this.ReturnBook_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

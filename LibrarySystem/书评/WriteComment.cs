@@ -33,14 +33,19 @@ namespace LibrarySystem
 
         private void submit_Click(object sender, EventArgs e)
         {
-            string sql="insert into IMDB values('"+richTextBox1.Text.ToString()+"','"+PublicPassBy.IMDB_Bookname+"','"+PublicPassBy.IMDB_Bookid+"','"+PublicPassBy.id+"','"+textBox_Rate+"')";
-            DataBaseApplication.ExecuteNonQuery(sql);
-            DialogResult result = MessageBox.Show("确认提交？", "温馨提示", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
+            if (richTextBox1 != null && textBox_Rate != null)
             {
-                //执行删除语句
-                MessageBox.Show("提交成功！");
+                string sql = "insert into IMDB values('" + richTextBox1.Text.ToString() + "','" + PublicPassBy.IMDB_Bookname + "','" + PublicPassBy.IMDB_Bookid + "','" + PublicPassBy.id + "','" + textBox_Rate + "')";
+                DataBaseApplication.ExecuteNonQuery(sql);
+                DialogResult result = MessageBox.Show("确认提交？", "温馨提示", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    //执行删除语句
+                    MessageBox.Show("提交成功！");
+                }
             }
+            else MessageBox.Show("请先填写完整！");
+           
             this.Close();
         }
 
@@ -80,6 +85,11 @@ namespace LibrarySystem
                 e.Handled = true;
 
             }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

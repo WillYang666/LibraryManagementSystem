@@ -12,6 +12,8 @@ namespace LibrarySystem
 {
     public partial class BorrowBook1 : Form
     {
+        /*
+        #region
         //------------------------------------------------------  控件大小随窗体大小变化
         private float X;
         private float Y;
@@ -58,7 +60,8 @@ namespace LibrarySystem
 
         }
         //--------------------------------------------------------------------------   控件大小随窗体大小变化结束
-
+        #endregion
+        */
         public string Select_ID;
         public BorrowBook1()
         {
@@ -90,22 +93,28 @@ namespace LibrarySystem
             dt2 = DataBaseApplication.GetDataTableValue(sql2);
             avgRate.Text = dt2.Rows[0][0].ToString();
             //--------------------------------控件大小随窗体大小变化
-            this.Resize += new EventHandler(BorrowBook1_Resize);
+          /*  this.Resize += new EventHandler(BorrowBook1_Resize);
 
             X = this.Width;
             Y = this.Height;
 
             setTag(this);
-            BorrowBook1_Resize(new object(), new EventArgs());
+            BorrowBook1_Resize(new object(), new EventArgs());*/
             //---------------------------------控件大小随窗体大小变化
             
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            BorrowBook borrow = new BorrowBook();
-            borrow.select_ID= (string)dataGridView1.CurrentCell.Value;
-            borrow.ShowDialog();
+            if (dataGridView1.DataSource != null)
+            {
+                BorrowBook borrow = new BorrowBook();
+                borrow.select_ID = (string)dataGridView1.CurrentCell.Value;
+                borrow.ShowDialog();
+                this.Close();
+            }
+            else MessageBox.Show("请先选择要借阅的书籍！");
+                
         }
 
     }

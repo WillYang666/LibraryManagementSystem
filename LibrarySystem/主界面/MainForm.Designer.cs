@@ -39,7 +39,6 @@
             this.新书入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.借书办理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.还书办理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.书籍注销ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息查询PToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.图书查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,8 +131,7 @@
             this.书籍管理BToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新书入库ToolStripMenuItem,
             this.借书办理ToolStripMenuItem,
-            this.还书办理ToolStripMenuItem,
-            this.书籍注销ToolStripMenuItem});
+            this.还书办理ToolStripMenuItem});
             this.书籍管理BToolStripMenuItem.Name = "书籍管理BToolStripMenuItem";
             this.书籍管理BToolStripMenuItem.Size = new System.Drawing.Size(84, 21);
             this.书籍管理BToolStripMenuItem.Text = "书籍管理(B)";
@@ -141,26 +139,22 @@
             // 新书入库ToolStripMenuItem
             // 
             this.新书入库ToolStripMenuItem.Name = "新书入库ToolStripMenuItem";
-            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新书入库ToolStripMenuItem.Text = "新书入库";
             // 
             // 借书办理ToolStripMenuItem
             // 
             this.借书办理ToolStripMenuItem.Name = "借书办理ToolStripMenuItem";
-            this.借书办理ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.借书办理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.借书办理ToolStripMenuItem.Text = "借书办理";
+            this.借书办理ToolStripMenuItem.Click += new System.EventHandler(this.借书办理ToolStripMenuItem_Click);
             // 
             // 还书办理ToolStripMenuItem
             // 
             this.还书办理ToolStripMenuItem.Name = "还书办理ToolStripMenuItem";
-            this.还书办理ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.还书办理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.还书办理ToolStripMenuItem.Text = "还书办理";
-            // 
-            // 书籍注销ToolStripMenuItem
-            // 
-            this.书籍注销ToolStripMenuItem.Name = "书籍注销ToolStripMenuItem";
-            this.书籍注销ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.书籍注销ToolStripMenuItem.Text = "书籍注销";
+            this.还书办理ToolStripMenuItem.Click += new System.EventHandler(this.还书办理ToolStripMenuItem_Click);
             // 
             // 信息查询PToolStripMenuItem
             // 
@@ -174,14 +168,14 @@
             // 图书查询ToolStripMenuItem
             // 
             this.图书查询ToolStripMenuItem.Name = "图书查询ToolStripMenuItem";
-            this.图书查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.图书查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.图书查询ToolStripMenuItem.Text = "图书查询";
             this.图书查询ToolStripMenuItem.Click += new System.EventHandler(this.图书查询ToolStripMenuItem_Click);
             // 
             // 用户信息查询ToolStripMenuItem
             // 
             this.用户信息查询ToolStripMenuItem.Name = "用户信息查询ToolStripMenuItem";
-            this.用户信息查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.用户信息查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.用户信息查询ToolStripMenuItem.Text = "用户信息查询";
             this.用户信息查询ToolStripMenuItem.Click += new System.EventHandler(this.用户信息查询ToolStripMenuItem_Click);
             // 
@@ -530,7 +524,6 @@
         private System.Windows.Forms.ToolStripMenuItem 新书入库ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 借书办理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 还书办理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 书籍注销ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图书查询ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 用户信息查询ToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;

@@ -71,5 +71,22 @@ namespace LibrarySystem
             }
             edit.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from Login_ID";
+            DataBaseApplication.ExecuteNonQuery(sql);
+            DataTable dt = new DataTable();
+            dt = DataBaseApplication.GetDataTableValue(sql);//执行sql语句
+            dataGridView1.DataSource = dt;
+        }
+
+        private void Edit_User_Load(object sender, EventArgs e)
+        {
+            if (PublicPassBy.level == "用户")
+            {
+                button1.Visible = false;
+            }
+        }
     }
 }

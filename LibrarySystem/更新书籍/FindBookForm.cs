@@ -12,6 +12,8 @@ namespace LibrarySystem
 {
     public partial class FindBookForm : Form
     {
+        /*
+        #region
         //------------------------------------------------------  控件大小随窗体大小变化
         private float X;
         private float Y;
@@ -58,7 +60,8 @@ namespace LibrarySystem
 
         }
         //--------------------------------------------------------------------------   控件大小随窗体大小变化结束
-
+        #endregion
+        */
         public string level1;
         public string Select_ID;
         public FindBookForm()
@@ -123,13 +126,17 @@ namespace LibrarySystem
             }
             edit.ShowDialog();
         }
-
+        
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            
-            BorrowBook1 borrow = new BorrowBook1();
-            borrow.Select_ID = (string)dataGridView1.CurrentCell.Value;
-            borrow.ShowDialog();
+            if (dataGridView1.DataSource != null)
+            {
+                BorrowBook1 borrow = new BorrowBook1();
+                borrow.Select_ID = (string)dataGridView1.CurrentCell.Value;
+                borrow.ShowDialog();
+            }
+            else MessageBox.Show("请先选择要借阅的书籍！");
+               
         }
 
         private void FindBookForm_Load(object sender, EventArgs e)
@@ -159,13 +166,13 @@ namespace LibrarySystem
                 toolStripLabel_AllBooks.Visible = false;
             }
             //--------------------------------控件大小随窗体大小变化
-            this.Resize += new EventHandler(Form1_Resize);
+            /*this.Resize += new EventHandler(Form1_Resize);
 
             X = this.Width;
             Y = this.Height;
 
             setTag(this);
-            Form1_Resize(new object(), new EventArgs());
+            Form1_Resize(new object(), new EventArgs());*/
             //---------------------------------控件大小随窗体大小变化
         }
 

@@ -157,6 +157,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LibrarySystem.Properties.Resources.登陆背景图;

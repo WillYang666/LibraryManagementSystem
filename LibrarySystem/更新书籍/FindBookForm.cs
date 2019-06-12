@@ -116,6 +116,7 @@ namespace LibrarySystem
             }
             Add_Book edit = new Add_Book();
             edit.type = "2";
+            
             // edit.select_ID = (string)dataGridView1.CurrentCell.Value;
             int a = dataGridView1.CurrentRow.Index;
             edit.select_ID = dataGridView1.Rows[a].Cells["书籍序列号"].Value.ToString();

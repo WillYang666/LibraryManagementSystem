@@ -69,24 +69,29 @@ namespace LibrarySystem
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            conn = new SqlConnection(connString);
-            conn.Open();
-            if (dataGridView1.Rows.Count > 0)
+            if (dataGridView1.DataSource != null)
             {
-                DataRow datarow = null;
-                for (int i = 0; i < dt.Rows.Count; i++)
+                conn = new SqlConnection(connString);
+                conn.Open();
+                if (dataGridView1.Rows.Count > 0)
                 {
-                    datarow = dt.Rows[i];
-                    insertToSql(datarow);
+                    DataRow datarow = null;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        datarow = dt.Rows[i];
+                        insertToSql(datarow);
+                    }
+                    conn.Close();
+                    MessageBox.Show("导入成功！");
                 }
-                conn.Close();
-                MessageBox.Show("导入成功！");
+                else
+                {
+                    MessageBox.Show("导入失败！");
+                }
             }
-            else
-            {
-                MessageBox.Show("导入失败！");
-            }  
+            else MessageBox.Show("请先选择表格！");
+            this.Close();
+           
         }   
         private void insertToSql(DataRow datarow)
         {

@@ -112,6 +112,7 @@ namespace LibrarySystem
                 textBox_Press.Text = dt.Rows[0][3].ToString();
                 textBox_Price.Text = dt.Rows[0][4].ToString();
                 textBox_Storage.Text = dt.Rows[0][5].ToString();
+                button3.Visible = false;
             }
         }
 

@@ -72,31 +72,35 @@ namespace LibrarySystem
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("确认归还？", "温馨提示", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
+            if(dataGridView1.DataSource!=null)
             {
-                //执行删除语句
-                MessageBox.Show("还书成功！");
+                DialogResult result = MessageBox.Show("确认归还？", "温馨提示", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    //执行删除语句
+                    MessageBox.Show("还书成功！");
+                }
+                select_ID = (string)dataGridView1.CurrentCell.Value;
+                //从在借单中删除
+                string sql = "delete from Borrow_List where 书籍序列号='" + select_ID + "'";
+                DataBaseApplication.ExecuteNonQuery(sql);
+                //获取书名
+                bookname = (string)dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                PublicPassBy.IMDB_Bookname = bookname;
+                PublicPassBy.IMDB_Bookid = select_ID;
+                //添加进还书单
+                string sql1 = "insert into Return_List values('" + select_ID + "','" + dataGridView1.CurrentRow.Cells[1].Value.ToString() + "','" + DateTime.Now.ToLongDateString().ToString() + "','" + dataGridView1.CurrentRow.Cells[3].Value.ToString() + "','" + PublicPassBy._name + "','" + PublicPassBy.email + "')";
+                DataBaseApplication.ExecuteNonQuery(sql1);
+                //加库存
+                string sql2 = "update Books_Info set 库存数=库存数+1 where 书籍序列号='" + select_ID + "'";
+                DataBaseApplication.ExecuteNonQuery(sql2);
+
+                //询问是否写书评
+                IMDB write = new IMDB();
+                write.ShowDialog();
+                this.Close();
             }
-            select_ID = (string)dataGridView1.CurrentCell.Value;
-            //从在借单中删除
-            string sql="delete from Borrow_List where 书籍序列号='"+select_ID+"'";
-            DataBaseApplication.ExecuteNonQuery(sql);
-            //获取书名
-            bookname = (string)dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            PublicPassBy.IMDB_Bookname = bookname;
-            PublicPassBy.IMDB_Bookid = select_ID;
-            //添加进还书单
-            string sql1 = "insert into Return_List values('"+select_ID+"','"+dataGridView1.CurrentRow.Cells[1].Value.ToString()+"','"+ DateTime.Now.ToLongDateString().ToString() + "','"+ dataGridView1.CurrentRow.Cells[3].Value.ToString()+"','"+PublicPassBy._name+"','"+PublicPassBy.email+"')";
-            DataBaseApplication.ExecuteNonQuery(sql1);
-            //加库存
-            string sql2 = "update Books_Info set 库存数=库存数+1 where 书籍序列号='"+select_ID+"'";
-            DataBaseApplication.ExecuteNonQuery(sql2);
-            
-            //询问是否写书评
-            IMDB write = new IMDB();
-            write.ShowDialog();
-            this.Close();
+           
         }
 
         private void send_email_Click(object sender, EventArgs e)

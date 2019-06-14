@@ -119,7 +119,7 @@ namespace LibrarySystem
                 MailMessage mailMessage = new MailMessage();
 
                 //发件人邮箱地址，方法重载不同，可以根据需求自行选择。
-                mailMessage.From = new MailAddress("1131263048@qq.com");
+                mailMessage.From = new MailAddress("example@xx.com");
 
                 //收件人邮箱地址。
                 ReturnBook re = new ReturnBook();//实例化调用收件人邮箱
@@ -170,7 +170,7 @@ namespace LibrarySystem
                 client.UseDefaultCredentials = false;
 
                 //验证发件人身份(发件人的邮箱，发送邮箱里的生成授权码);
-                client.Credentials = new NetworkCredential("1131263048@qq.com", "cmtwvevzhstkgccf");
+                client.Credentials = new NetworkCredential("xx@qq.com", "");
 
                 //发送
                 client.Send(mailMessage);
